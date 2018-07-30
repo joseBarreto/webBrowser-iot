@@ -6,9 +6,25 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    Background="White">
 
     <Grid>
-
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <ProgressBar 
+            x:Name="_progressBar"
+            Value="0"
+            Maximum="200" 
+            Margin="10,50,0,754" 
+            IsIndeterminate="true" 
+            Visibility="Collapsed"
+            Grid.Row="0" 
+            Foreground="Black"
+            />
+        <!--//<Grid x:Name="_contentPanel" Grid.Row="1" Margin="0,0,0,0">-->
+        <WebView  x:Name="webView"  Margin="0,0,0,0" Grid.Row="1"/>
+        <!--</Grid>-->
     </Grid>
 </Page>
